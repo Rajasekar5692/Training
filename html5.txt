@@ -1,0 +1,10 @@
+- Reduces javascript by providing html new elements like email, number ,url, date picket
+- new attributes like data attribute, required 
+- Provides new API like local storage, webdb (SQL Lite)
+- Semantic tags 
+    - Header
+    - Footer
+    - Section
+    - Article
+    (SEO)  + Accessability
+- HTML 5 no doc type
