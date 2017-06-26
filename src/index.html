@@ -3,52 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <title>Title of the document</title>
-<style>
-    .div1 {
-        border : 2px solid red ;
-        width : 250px;
-    }
-    .span1 {
-        border : 2px solid red ;
-         width : 250px;
-    }
-    .div2 {
-        display : inline-block;
-        border : 2px solid red ;
-        width : 250px;
-    }
-    </style>
-</head>
-
+<link rel="stylesheet" href="\node_modules\bootstrap\dist\css\bootstrap.css">
 <body>
+<div class="panel-group">
+  <div class="panel panel-default">
+    <div class="panel-body">
+	<div class="row">
+	<div class="col-md-2">
+	
+	<label> USERID</label>
+	</div>
+	<div class="col-md-3">
+	
+	<input type="text" value="" Placeholder ="USERID" class ="form-control" id="txt_usr_ID"/>
+	
+	</div>
+	</div>
+	<div class="row">
+	<div class="col-md-2">
+	
+	<label> PASSWORD</label>
+	</div>
+	<div class="col-md-3">
+	
+	<input type="text" value="" Placeholder ="PASSWORD" class ="form-control" id="txt_usr_pwd"/>
+	
+	</div>
+	</div>
+	<div class="row">
+	<input type="button" value="save"  class="btn btn-primary" />
+	</div>
+	<div class ="row">
+	<div class="col-md-2">
+	<label>
+	Remember</label>
+	<input type="checkbox" id="chk_remember"/>
+	
+	
+	</div>
+	</div>
 
-<div class =div1>
-    <h4>hello there</h4>
+	</div>
+	</div>
+	</div>
 
-</div>
-<div class =div1>
-    <h4>hello there</h4>
+	<script>
+	window.onload=function(){
+	document.getElementById("txt_usr_ID").value=window.localStorage.getItem("txt_usr_ID");
+	document.getElementById("txt_usr_pwd").value=window.localStorage.getItem("txt_usr_pwd"); 
+	 
+	 var chk_remenber = document.getElementById("chk_remember");
+	 chk_remenber.addEventListener("click",function(){
+	 var txt_usrID=document.getElementById("txt_usr_ID").value;
+	 var txt_pwd =document.getElementById("txt_usr_pwd").value;
+	 
+	 if(chk_remenber.checked){
+	 window.localStorage.setItem=("txt_usr_ID",txt_usrID);
+	 window.localStorage.setItem=("txt_usr_pwd",txt_pwd);
+	 }
+	 else{
+	 window.localStorage.setItem=("txt_usr_ID","");
+	 window.localStorage.setItem=("txt_usr_pwd","");
+	 	 }
 
-</div>
+	 })
+	 
+	 }
+	
+	</script>
 
-<span class ="span1">
-hello there
-</span>
-
-<span class ="span1">
-hello thereiduheiuv p9ue piuevb 
-</span>
-<span class =span1>
-hello therehv u ivbuv uivd dviun
-</span>
-<div class =div2>
-    <h4>hello there</h4>
-
-</div>
-<div class =div2>
-    <h4>hello there</h4>
-
-</div>
 
 </body>
 
