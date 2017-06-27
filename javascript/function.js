@@ -7,3 +7,5 @@ for(var i=1;i<10;i++)
 
 multiplication(5);
 multiplication.call(null,8);
+ 
+ console.log(multiplication.length);
